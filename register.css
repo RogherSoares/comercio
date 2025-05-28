@@ -24,3 +24,34 @@ body {
     align-items: center;
     justify-content: center;
 }
+h1 {
+    font-size: 3rem;
+    margin-left: 10%;
+    padding: 10px;
+}
+.imputBox {
+    width: 600px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+input {
+    width: 80%;
+    height: 70%;
+    border: none;
+    outline: none;
+}
+button {
+    width: 40%;
+    padding: 10px;
+    margin-left: 30%;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
