@@ -55,7 +55,7 @@ h2 {
     color: rgb(93, 64, 55);
 }
 .imputBox {
-    width: 350px;
+    width: 380px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid rgb(189, 189, 189);
@@ -65,17 +65,20 @@ h2 {
     background-color: rgb(255, 253, 231);
 }
 input {
-    width: 50%;
+    width: 55%;
     height: 70%;
     border: none;
     outline: none;
     background: transparent;
     color: rgb(93, 64, 55);
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px rgb(255, 253, 231) inset !important;
+}
 button {
     width: 40%;
     padding: 10px;
-    margin-left: 18%;
+    margin-left: 23%;
     border-radius: 5px;
     border: none;
     background-color: rgb(255, 183, 77);
