@@ -43,5 +43,143 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, rgb(255, 248, 225) 0%, rgb(225, 245, 254) 100%);
-    line-height: 1.7; 
+    color: rgb(93, 64, 55);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 1000px;
+    background: rgba(255, 253, 231, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px 0 rgba(93, 64, 55, 0.08);
+    padding: 32px 28px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+h1 {
+    color: rgb(76, 175, 80);
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(93, 64, 55);
+    font-size: 2rem;
+    margin: 32px 0 18px 0;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.intro-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 18px;
+    box-shadow: 0 2px 12px 0 rgba(93, 64, 55, 0.10);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+.card {
+    background: rgb(255, 248, 225);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(93, 64, 55, 0.07);
+    padding: 18px 14px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 4px 16px 0 rgba(76, 175, 80, 0.13);
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.card h3 {
+    color: rgb(76, 175, 80);
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+.card p {
+    color: rgb(93, 64, 55);
+    font-size: 1rem;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.produto {
+    background: rgb(255, 253, 231);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(93, 64, 55, 0.07);
+    padding: 16px 12px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.produto:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 4px 16px 0 rgba(76, 175, 80, 0.13);
+}
+.produto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.produto h4 {
+    color: rgb(76, 175, 80);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+.produto p {
+    color: rgb(93, 64, 55);
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+}
+.preco {
+    color: rgb(255, 183, 77);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.comprar-btn {
+    width: 90%;
+    padding: 10px 0;
+    margin: 12px auto 0 auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 183, 77);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 1px 4px 0 rgba(93, 64, 55, 0.07);
+}
+.comprar-btn:hover {
+    background-color: rgb(76, 175, 80);
+    transform: translateY(-2px) scale(1.03);
 }
