@@ -29,3 +29,11 @@ const limparFormulario = () => {
     document.getElementById('cidade').value = '';
     document.getElementById('estado').value = '';
 }
+
+//Função para preencher o formulario
+const preencherFormulario = (address) => {
+    document.getElementById('rua').value = address.logradouro;
+    document.getElementById('bairro').value = address.bairro;
+    document.getElementById('cidade').value = address.localidade;
+    document.getElementById('estado').value = address.uf;
+}
