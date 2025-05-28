@@ -8,13 +8,30 @@
 }
 header {
     width: 100%;
-    height: 60px;
+    height: 20lvh;
+    background-color: #c2c2c2;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin-top: 15lvh;
 }
 li {
     list-style: none;
+    padding: 10px 20px;
+    display: inline-block;  
 }
 a {
     text-decoration: none;
+    color: white;
+    text-shadow: 1x 1px 2px black;
+    font-size: 1.2rem;
+}
+a:hover {
+    color: #007bff;
+    font-style: italic;
 }
 body {
     width: 100%;
