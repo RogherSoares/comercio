@@ -33,6 +33,8 @@ const limparFormulario = () =>{
     document.getElementById('bairro').value = '';
     document.getElementById('cidade').value = '';
     document.getElementById('estado').value = '';
+    document.getElementById('numero').value = '';
+    document.getElementById('complemento').value = '';
 }
 
 //Preenche os campos relacionados ao CEP...
