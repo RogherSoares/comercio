@@ -1,6 +1,6 @@
 'use strict'; //Modo "Restrito"
 //Consumindo API de CEP, do ViaCep
-// https://viacep.com.br/
+// https://viacep.com.br/ws/${cep.value}/json/
 
 //Verifica se o CEP é válido...
 const eNumero = (numero) => /^[0-9]+$/.test(numero); //Expressão Regular
@@ -48,3 +48,39 @@ const preencherForumulario = (endereco) =>{
 
 //Adicionando um evento DOM, no input CEP... 1- passo
 document.getElementById('cep').addEventListener('focusout', pesquisarCep);
+
+//Validando o CPF
+const eCpf = (cpf) => {
+    cpf = cpf.replace(/[^\d]+/g, ''); //Remove tudo que não for dígito
+    if(cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) 
+        return false; //Verifica se o CPF tem 11 dígitos e se não é uma sequência de números iguais
+    let soma = 0;
+    for(let i = 0; i < 9; i++) {
+        soma += parseInt(cpf[i]) * (10 - i);
+    }
+    let resto = (soma * 10) % 11;
+    if(resto === 10) resto = 0;
+    if(resto !== parseInt(cpf[9])) 
+        return false;
+
+    soma = 0;
+    for(let i = 0; i < 10; i++) {
+        soma += parseInt(cpf[i]) * (11 - i);
+    }
+    resto = (soma * 10) % 11;
+    if(resto === 10) resto = 0;
+    return resto === parseInt(cpf[10]);
+};
+
+// Adiciona evento para validar CPF ao sair do campo
+document.getElementById('cpf').addEventListener('focusout', function() {
+    const cpf = this.value;
+    const erroSpan = document.getElementById('cpf-erro');
+    if (!eCpf(cpf)) {
+        erroSpan.textContent = 'CPF inválido!';
+        erroSpan.style.color = 'red';
+    } else {
+        erroSpan.textContent = '✔';
+        erroSpan.style.color = 'green';
+    }
+});
