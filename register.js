@@ -1,6 +1,6 @@
 'use strict'; //Modo "Restrito"
 //Consumindo API de CEP, do ViaCep
-// https://viacep.com.br/ws/${cep.value}/json/
+// https://viacep.com.br/
 
 //Verifica se o CEP é válido...
 const eNumero = (numero) => /^[0-9]+$/.test(numero); //Expressão Regular
@@ -33,9 +33,6 @@ const limparFormulario = () =>{
     document.getElementById('bairro').value = '';
     document.getElementById('cidade').value = '';
     document.getElementById('estado').value = '';
-    document.getElementById('cep').value = '';
-    document.getElementById('numero').value = '';
-    document.getElementById('complemento').value = '';
 }
 
 //Preenche os campos relacionados ao CEP...
